@@ -20,3 +20,16 @@ def hours_ahead(request, offset):
     dt = datetime.datetime.now() + datetime.timedelta(hours=offset)
     html = "<html><body>In %s hour(s), it will be %s.</body></html>" %(offset, dt)
     return HttpResponse(html)
+
+def add(request):
+    a = request.GET['a']
+    b = request.GET['b']
+    c = int(a)+int(b)
+    return HttpResponse(str(c))
+
+def add2(request,a,b):
+    c = int(a) + int(b)
+    return HttpResponse(str(c))
+
+def index(request):
+    return render(request,'home.html')

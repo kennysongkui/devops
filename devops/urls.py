@@ -22,4 +22,8 @@ urlpatterns = [
     url(r'^hello/$', views.hello),
     url(r'^time/$', views.current_datetime),
     url(r'^time/plus/(\d{1,2})/$',views.hours_ahead),
+    url(r'^add/$', views.add, name='add'),
+    # url(r'^add/(\d+)/(\d+)', views.add2, name='add2'),
+    url(r'^new_add/(\d+)/(\d+)', views.add2, name='add2'),
+    url(r'^$', views.index, name='index'),
 ]
